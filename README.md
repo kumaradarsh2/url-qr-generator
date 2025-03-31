@@ -56,8 +56,6 @@ You will be prompted to enter a URL. After entering the URL:
 ```
 $ node index.js
 ? Enter the URL: https://github.com
-{ URL: 'https://github.com' }
-https://github.com
 QR code generated successfully!
 URL has been saved to url.txt file.
 ```

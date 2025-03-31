@@ -16,15 +16,14 @@ inquirer
     { message: "Enter the URL:" , name: "URL" }
   ])
   .then((answers) => {
-    console.log(answers);
+    // console.log(answers);
     const userEnteredURL = answers.URL;
-    console.log(userEnteredURL);
+    // console.log(userEnteredURL);
 
     // generete qr image from the url entered by user
     const qr_png = qr.image(userEnteredURL, { type: 'png' });
     qr_png.pipe(fs.createWriteStream('qrcode.png'));
     console.log("QR code generated successfully!");
-
 
     fs.writeFile("url.txt", userEnteredURL, (err) => {
         if (err) throw err;
